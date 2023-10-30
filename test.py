@@ -15,7 +15,7 @@ boost = 0
 agent = "PPO2"
 file = "ppomodel"
 
-env = MLFQEnv(boost, nQueues, True)
+env = MLFQEnv(boost, nQueues, False)
 agent_dict = {'PPO2': PPO2,'ACKTR':ACKTR}
 print("Agent:", agent)
 
@@ -44,7 +44,7 @@ for i in range(100):
 
     env.print_stats()
     env.log_stats()
-    env.render()
+    #env.render()
 
 wandb.run.finish()
 
