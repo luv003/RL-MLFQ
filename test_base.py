@@ -31,6 +31,6 @@ for i in range(100):
         wandb.log({"Iteration": i, "Reward": total_reward})
 
         env.print_stats()
-        env.render()
+        #env.render()
         env.log_stats()
 wandb.run.finish()
